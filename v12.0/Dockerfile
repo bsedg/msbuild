@@ -15,7 +15,7 @@ RUN choco install git -y ; `
   choco install nuget.commandline --allow-empty-checksums -y ; `
   choco install microsoft-build-tools -y --allow-empty-checksums -version 12.0.21005.20140416
 
-ADD v12.0/tools C:/tools
+ADD tools C:/tools
 RUN mkdir 'C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v12.0' -Force ; `
     mv C:/tools/* 'C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v12.0'
 
